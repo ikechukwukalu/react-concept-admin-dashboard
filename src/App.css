@@ -1,0 +1,10 @@
+.slimScrollBar {
+    background: rgba(255, 227, 227, 0.473) !important; 
+}
+.connection-list {
+    width: 300px !important;
+    padding: 20px !important;
+}
+.scrollbar > div > div {
+    z-index: 9000 !important;
+}
