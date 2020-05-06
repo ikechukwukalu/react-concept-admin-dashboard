@@ -4,6 +4,9 @@ import $ from 'jquery';
 
 import NoMatch from '../../helpers/no-match';
 
+import JvectorMap from './jvector.jsx';
+import GoogleMap from './google-map.jsx';
+
 class Maps extends Component {
   constructor(props) {
     super(props);
@@ -19,12 +22,18 @@ class Maps extends Component {
     return (
         
       <Switch>
-            {/* <Route path={`${this.state.match.url}/dashboard`} render={(props) => 
-                <EcommerceDashboard {...props}
+            <Route path={`${this.state.match.url}/vector`} render={(props) => 
+                <JvectorMap {...props}
                   base_url={this.state.base_url}
                   api_url={this.state.api_url}
                 />} 
-            /> */}
+            />
+            <Route path={`${this.state.match.url}/google`} render={(props) => 
+                <GoogleMap {...props}
+                  base_url={this.state.base_url}
+                  api_url={this.state.api_url}
+                />} 
+            />
             <Route render={(props) =>
               <NoMatch
                 base_url={this.state.base_url} 

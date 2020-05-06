@@ -1,4 +1,4 @@
-import React, { Component, useState, useEffect } from 'react';
+import React, { Component, useState, useEffect, Fragment } from 'react';
 import {  Route, Link, Switch, Redirect } from "react-router-dom";
 import { useHistory } from 'react-router-dom';
 import $ from 'jquery';
@@ -20,6 +20,7 @@ import Pages from './pages/pages';
 import Apps from './pages/apps';
 import Icons from './pages/icons';
 import Maps from './pages/maps';
+import External from './pages/pages/external';
 
 function RouteChange () {
   const history = useHistory();
@@ -49,110 +50,125 @@ class Components extends Component {
   route_change = (e) => {
     this.setState({
       path: e.detail
-    }, () => console.log(this.state.path));
+    });
   }
 
   render() {
-    return [
-      <div key="main" className="dashboard-main-wrapper">
-        <RouteChange />
-        <Header
-          base_url={this.state.base_url} 
-          api_url={this.state.api_url}
-        />
-        <div className="dashboard-wrapper">
-          <Switch>
-              <Route exact path="/">
-                <Redirect to="/ecommerce/dashboard" />
-              </Route>
-              <Route path="/ecommerce" render={(props) => 
-                <Ecommerce {...props}
-                  base_url={this.state.base_url} 
-                  api_url={this.state.api_url}
-                />} 
-              />
-              <Route path="/finance/dashboard" render={(props) => 
-                <FinanceDashboard {...props} 
-                  base_url={this.state.base_url} 
-                  api_url={this.state.api_url}
-                />} 
-              />
-              <Route path="/sales/dashboard" render={(props) => 
-                <SalesDashboard {...props} 
-                  base_url={this.state.base_url} 
-                  api_url={this.state.api_url}
-                />} 
-              />
-              <Route path="/influencer" render={(props) => 
-                <Influencer {...props}
-                  base_url={this.state.base_url} 
-                  api_url={this.state.api_url}
-                />} 
-              />
-              <Route path="/elements" render={(props) => 
-                <Elements {...props}
-                  base_url={this.state.base_url} 
-                  api_url={this.state.api_url}
-                />} 
-              />
-              <Route path="/charts" render={(props) => 
-                <Charts {...props}
-                  base_url={this.state.base_url} 
-                  api_url={this.state.api_url}
-                />} 
-              />
-              <Route path="/forms" render={(props) => 
-                <Forms {...props}
-                  base_url={this.state.base_url} 
-                  api_url={this.state.api_url}
-                />} 
-              />
-              <Route path="/tables" render={(props) => 
-                <Tables {...props}
-                  base_url={this.state.base_url} 
-                  api_url={this.state.api_url}
-                />} 
-              />
-              <Route path="/pages" render={(props) => 
-                <Pages {...props}
-                  base_url={this.state.base_url} 
-                  api_url={this.state.api_url}
-                />} 
-              />
-              <Route path="/apps" render={(props) => 
-                <Apps {...props}
-                  base_url={this.state.base_url} 
-                  api_url={this.state.api_url}
-                />} 
-              />
-              <Route path="/icons" render={(props) => 
-                <Icons {...props}
-                  base_url={this.state.base_url} 
-                  api_url={this.state.api_url}
-                />} 
-              />
-              <Route path="/maps" render={(props) => 
-                <Maps {...props}
-                  base_url={this.state.base_url} 
-                  api_url={this.state.api_url}
-                />} 
-              />
-              <Route render={(props) =>
-                <NoMatch
-                  base_url={this.state.base_url} 
-                  api_url={this.state.api_url} 
-                />}
-              />
-          </Switch>
-          <Footer
-            key={"footer"+this.state.path}
+    if(this.state.path.trim().search("/external") == -1 )
+      return (
+        <div className="dashboard-main-wrapper">
+          <RouteChange />
+          <Header
             base_url={this.state.base_url} 
             api_url={this.state.api_url}
-            path={this.state.path}
           />
+          <div className="dashboard-wrapper">
+            <Switch>
+                <Route exact path="/">
+                  <Redirect to="/ecommerce/dashboard" />
+                </Route>
+                <Route path="/ecommerce" render={(props) => 
+                  <Ecommerce {...props}
+                    base_url={this.state.base_url} 
+                    api_url={this.state.api_url}
+                  />} 
+                />
+                <Route path="/finance/dashboard" render={(props) => 
+                  <FinanceDashboard {...props} 
+                    base_url={this.state.base_url} 
+                    api_url={this.state.api_url}
+                  />} 
+                />
+                <Route path="/sales/dashboard" render={(props) => 
+                  <SalesDashboard {...props} 
+                    base_url={this.state.base_url} 
+                    api_url={this.state.api_url}
+                  />} 
+                />
+                <Route path="/influencer" render={(props) => 
+                  <Influencer {...props}
+                    base_url={this.state.base_url} 
+                    api_url={this.state.api_url}
+                  />} 
+                />
+                <Route path="/elements" render={(props) => 
+                  <Elements {...props}
+                    base_url={this.state.base_url} 
+                    api_url={this.state.api_url}
+                  />} 
+                />
+                <Route path="/charts" render={(props) => 
+                  <Charts {...props}
+                    base_url={this.state.base_url} 
+                    api_url={this.state.api_url}
+                  />} 
+                />
+                <Route path="/forms" render={(props) => 
+                  <Forms {...props}
+                    base_url={this.state.base_url} 
+                    api_url={this.state.api_url}
+                  />} 
+                />
+                <Route path="/tables" render={(props) => 
+                  <Tables {...props}
+                    base_url={this.state.base_url} 
+                    api_url={this.state.api_url}
+                  />} 
+                />
+                <Route path="/pages" render={(props) => 
+                  <Pages {...props}
+                    base_url={this.state.base_url} 
+                    api_url={this.state.api_url}
+                  />} 
+                />
+                <Route path="/apps" render={(props) => 
+                  <Apps {...props}
+                    base_url={this.state.base_url} 
+                    api_url={this.state.api_url}
+                  />} 
+                />
+                <Route path="/icons" render={(props) => 
+                  <Icons {...props}
+                    base_url={this.state.base_url} 
+                    api_url={this.state.api_url}
+                  />} 
+                />
+                <Route path="/maps" render={(props) => 
+                  <Maps {...props}
+                    base_url={this.state.base_url} 
+                    api_url={this.state.api_url}
+                  />} 
+                />
+                <Route render={(props) =>
+                  <NoMatch
+                    base_url={this.state.base_url} 
+                    api_url={this.state.api_url} 
+                  />}
+                />
+            </Switch>
+            <Footer
+              key={"footer"+this.state.path}
+              base_url={this.state.base_url} 
+              api_url={this.state.api_url}
+              path={this.state.path}
+            />
+          </div>
         </div>
-      </div>
-    ];
+      );
+    else
+      return (
+        <Fragment>
+          <RouteChange />
+          <Switch>
+              <Route path="/external" render={(props) => 
+                <External {...props}
+                  base_url={this.state.base_url} 
+                  api_url={this.state.api_url}
+                />} 
+              />
+          </Switch>
+        </Fragment>
+      );
   }
 }
 

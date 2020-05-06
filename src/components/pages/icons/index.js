@@ -4,6 +4,14 @@ import $ from 'jquery';
 
 import NoMatch from '../../helpers/no-match';
 
+import IconFontawesome from './fontawesome.jsx';
+import IconMaterial from './material.jsx';
+import IconSimpleLine from './simple-line.jsx';
+import IconThemify from './themify.jsx';
+import IconFlag from './flag.jsx';
+import IconWeather from './weather.jsx';
+
+
 class Icons extends Component {
   constructor(props) {
     super(props);
@@ -19,12 +27,42 @@ class Icons extends Component {
     return (
         
       <Switch>
-            {/* <Route path={`${this.state.match.url}/dashboard`} render={(props) => 
-                <EcommerceDashboard {...props}
+            <Route path={`${this.state.match.url}/fontawesome`} render={(props) => 
+                <IconFontawesome {...props}
                   base_url={this.state.base_url}
                   api_url={this.state.api_url}
                 />} 
-            /> */}
+            />
+            <Route path={`${this.state.match.url}/material`} render={(props) => 
+                <IconMaterial {...props}
+                  base_url={this.state.base_url}
+                  api_url={this.state.api_url}
+                />} 
+            />
+            <Route path={`${this.state.match.url}/simple-lineicon`} render={(props) => 
+                <IconSimpleLine {...props}
+                  base_url={this.state.base_url}
+                  api_url={this.state.api_url}
+                />} 
+            />
+            <Route path={`${this.state.match.url}/themify`} render={(props) => 
+                <IconThemify {...props}
+                  base_url={this.state.base_url}
+                  api_url={this.state.api_url}
+                />} 
+            />
+            <Route path={`${this.state.match.url}/flag`} render={(props) => 
+                <IconFlag {...props}
+                  base_url={this.state.base_url}
+                  api_url={this.state.api_url}
+                />} 
+            />
+            <Route path={`${this.state.match.url}/weather`} render={(props) => 
+                <IconWeather {...props}
+                  base_url={this.state.base_url}
+                  api_url={this.state.api_url}
+                />} 
+            />
             <Route render={(props) =>
               <NoMatch
                 base_url={this.state.base_url} 

@@ -301,16 +301,16 @@ class Header extends Component {
                                             <Link className="nav-link" id="header" to="/pages/blank-page-header">Blank Page Header</Link>
                                         </li>
                                         <li className="nav-item">
-                                            <Link className="nav-link" to="/pages/login">Login</Link>
+                                            <Link className="nav-link" to="/external/login">Login</Link>
                                         </li>
                                         <li className="nav-item">
-                                            <Link className="nav-link" to="/pages/404-page">404 page</Link>
+                                            <Link className="nav-link" to="/external/404">404 page</Link>
                                         </li>
                                         <li className="nav-item">
-                                            <Link className="nav-link" to="/pages/sign-up">Sign up Page</Link>
+                                            <Link className="nav-link" to="/external/sign-up">Sign up Page</Link>
                                         </li>
                                         <li className="nav-item">
-                                            <Link className="nav-link" to="/pages/forgot-password">Forgot Password</Link>
+                                            <Link className="nav-link" to="/external/forgot-password">Forgot Password</Link>
                                         </li>
                                         <li className="nav-item">
                                             <Link className="nav-link" id="pricing" to="/pages/pricing">Pricing Tables</Link>
