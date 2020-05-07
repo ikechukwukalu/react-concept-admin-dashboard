@@ -13,7 +13,8 @@ class Header extends Component {
     this.state = {
       base_url: this.props.base_url,
       api_url: this.props.api_url,
-      path: window.location.pathname,
+      basename: this.props.basename,
+      path: this.props.basename.length > 0 ? window.location.pathname.trim().replace('/'+this.props.basename, '') : window.location.pathname.trim(),
       isOpen: false,
       isOpenSideNav: false
     }
@@ -285,10 +286,10 @@ setCaret = (e) => {
                                     <UncontrolledCollapse toggler="#submenu-5" className="submenu">
                                         <ul className="nav flex-column">
                                             <li className="nav-item">
-                                                <Link className="nav-link" id="table" to="/tables/general">General Tables</Link>
+                                                <Link className="nav-link" id="general" to="/tables/general">General Tables</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link className="nav-link" id="tables" to="/tables/datatables">Data Tables</Link>
+                                                <Link className="nav-link" id="datatables" to="/tables/datatables">Data Tables</Link>
                                             </li>
                                         </ul>
                                     </UncontrolledCollapse>

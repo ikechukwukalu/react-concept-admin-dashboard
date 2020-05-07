@@ -22,7 +22,7 @@ class Pages extends Component {
     this.state = {
       base_url: this.props.base_url,
       api_url: this.props.api_url,
-      path: window.location.pathname,
+      basename: this.props.basename,
       match: this.props.match
     }
   }
@@ -35,73 +35,85 @@ class Pages extends Component {
                 <Invoice {...props}
                   base_url={this.state.base_url}
                   api_url={this.state.api_url}
+                  basename={this.state.basename}
                 />} 
             />
             <Route path={`${this.state.match.url}/blank-page`} render={(props) => 
                 <Blank {...props}
                   base_url={this.state.base_url}
                   api_url={this.state.api_url}
+                  basename={this.state.basename}
                 />} 
             />
             <Route path={`${this.state.match.url}/blank-page-header`} render={(props) => 
                 <BlankHeader {...props}
                   base_url={this.state.base_url}
                   api_url={this.state.api_url}
+                  basename={this.state.basename}
                 />} 
             />
             <Route path={`${this.state.match.url}/pricing`} render={(props) => 
                 <Pricing {...props}
                   base_url={this.state.base_url}
                   api_url={this.state.api_url}
+                  basename={this.state.basename}
                 />} 
             />
             <Route path={`${this.state.match.url}/timeline`} render={(props) => 
                 <Timeline {...props}
                   base_url={this.state.base_url}
                   api_url={this.state.api_url}
+                  basename={this.state.basename}
                 />} 
             />
             <Route path={`${this.state.match.url}/calendar`} render={(props) => 
                 <Calendar {...props}
                   base_url={this.state.base_url}
                   api_url={this.state.api_url}
+                  basename={this.state.basename}
                 />} 
             />
             <Route path={`${this.state.match.url}/sortable-nestable-lists`} render={(props) => 
                 <Sortable {...props}
                   base_url={this.state.base_url}
                   api_url={this.state.api_url}
+                  basename={this.state.basename}
                 />} 
             />
             <Route path={`${this.state.match.url}/widgets`} render={(props) => 
                 <Widgets {...props}
                   base_url={this.state.base_url}
                   api_url={this.state.api_url}
+                  basename={this.state.basename}
                 />} 
             />
             <Route path={`${this.state.match.url}/media-object`} render={(props) => 
                 <MediaObject {...props}
                   base_url={this.state.base_url}
                   api_url={this.state.api_url}
+                  basename={this.state.basename}
                 />} 
             />
             <Route path={`${this.state.match.url}/cropper-image`} render={(props) => 
                 <CropperImage {...props}
                   base_url={this.state.base_url}
                   api_url={this.state.api_url}
+                  basename={this.state.basename}
                 />} 
             />
             <Route path={`${this.state.match.url}/color-picker`} render={(props) => 
                 <ColorPicker {...props}
                   base_url={this.state.base_url}
                   api_url={this.state.api_url}
+                  basename={this.state.basename}
                 />} 
             />
             <Route render={(props) =>
               <NoMatch
-                base_url={this.state.base_url} 
-                api_url={this.state.api_url} 
-              />}
+                base_url={this.state.base_url}
+                  api_url={this.state.api_url}
+                  basename={this.state.basename}
+                />}
             />
         </Switch>
     );

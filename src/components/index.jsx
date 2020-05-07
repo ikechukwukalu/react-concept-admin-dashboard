@@ -39,6 +39,7 @@ class Components extends Component {
     this.state = {
       base_url: this.props.base_url,
       api_url: this.props.api_url,
+      basename: this.props.basename,
       path: window.location.pathname
     }
   }
@@ -61,6 +62,7 @@ class Components extends Component {
           <Header
             base_url={this.state.base_url} 
             api_url={this.state.api_url}
+            basename={this.state.basename}
           />
           <div className="dashboard-wrapper">
             <Switch>
@@ -71,78 +73,91 @@ class Components extends Component {
                   <Ecommerce {...props}
                     base_url={this.state.base_url} 
                     api_url={this.state.api_url}
+                    basename={this.state.basename}
                   />} 
                 />
                 <Route path="/finance/dashboard" render={(props) => 
                   <FinanceDashboard {...props} 
                     base_url={this.state.base_url} 
                     api_url={this.state.api_url}
+                    basename={this.state.basename}
                   />} 
                 />
                 <Route path="/sales/dashboard" render={(props) => 
                   <SalesDashboard {...props} 
                     base_url={this.state.base_url} 
                     api_url={this.state.api_url}
+                    basename={this.state.basename}
                   />} 
                 />
                 <Route path="/influencer" render={(props) => 
                   <Influencer {...props}
                     base_url={this.state.base_url} 
                     api_url={this.state.api_url}
+                    basename={this.state.basename}
                   />} 
                 />
                 <Route path="/elements" render={(props) => 
                   <Elements {...props}
                     base_url={this.state.base_url} 
                     api_url={this.state.api_url}
+                    basename={this.state.basename}
                   />} 
                 />
                 <Route path="/charts" render={(props) => 
                   <Charts {...props}
                     base_url={this.state.base_url} 
                     api_url={this.state.api_url}
+                    basename={this.state.basename}
                   />} 
                 />
                 <Route path="/forms" render={(props) => 
                   <Forms {...props}
                     base_url={this.state.base_url} 
                     api_url={this.state.api_url}
+                    basename={this.state.basename}
                   />} 
                 />
                 <Route path="/tables" render={(props) => 
                   <Tables {...props}
                     base_url={this.state.base_url} 
                     api_url={this.state.api_url}
+                    basename={this.state.basename}
                   />} 
                 />
                 <Route path="/pages" render={(props) => 
                   <Pages {...props}
                     base_url={this.state.base_url} 
                     api_url={this.state.api_url}
+                    basename={this.state.basename}
                   />} 
                 />
                 <Route path="/apps" render={(props) => 
                   <Apps {...props}
                     base_url={this.state.base_url} 
                     api_url={this.state.api_url}
+                    basename={this.state.basename}
                   />} 
                 />
                 <Route path="/icons" render={(props) => 
                   <Icons {...props}
                     base_url={this.state.base_url} 
                     api_url={this.state.api_url}
+                    basename={this.state.basename}
                   />} 
                 />
                 <Route path="/maps" render={(props) => 
                   <Maps {...props}
                     base_url={this.state.base_url} 
                     api_url={this.state.api_url}
+                    basename={this.state.basename}
                   />} 
                 />
                 <Route render={(props) =>
                   <NoMatch
                     base_url={this.state.base_url} 
                     api_url={this.state.api_url} 
+                    basename={this.state.basename}
                   />}
                 />
             </Switch>
@@ -150,6 +165,7 @@ class Components extends Component {
               key={"footer"+this.state.path}
               base_url={this.state.base_url} 
               api_url={this.state.api_url}
+              basename={this.state.basename}
               path={this.state.path}
             />
           </div>
@@ -163,7 +179,8 @@ class Components extends Component {
               <Route path="/external" render={(props) => 
                 <External {...props}
                   base_url={this.state.base_url} 
-                  api_url={this.state.api_url}
+                  api_url={this.state.api_url} 
+                  basename={this.state.basename}
                 />} 
               />
           </Switch>

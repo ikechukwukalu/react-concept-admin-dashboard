@@ -17,7 +17,7 @@ class Charts extends Component {
     this.state = {
       base_url: this.props.base_url,
       api_url: this.props.api_url,
-      path: window.location.pathname,
+      basename: this.props.basename,
       match: this.props.match
     }
   }
@@ -30,43 +30,50 @@ class Charts extends Component {
                 <C3 {...props}
                   base_url={this.state.base_url}
                   api_url={this.state.api_url}
-                />} 
+                  basename={this.state.basename}
+                />}
             />
             <Route path={`${this.state.match.url}/chartist`} render={(props) => 
                 <Chartist {...props}
                   base_url={this.state.base_url}
                   api_url={this.state.api_url}
-                />} 
+                  basename={this.state.basename}
+                />}
             />
             <Route path={`${this.state.match.url}/chart`} render={(props) => 
                 <Chart {...props}
                   base_url={this.state.base_url}
                   api_url={this.state.api_url}
+                  basename={this.state.basename}
                 />}
             />
             <Route path={`${this.state.match.url}/morris`} render={(props) => 
                 <Morris {...props}
                   base_url={this.state.base_url}
                   api_url={this.state.api_url}
-                />} 
+                  basename={this.state.basename}
+                />}
             />
             <Route path={`${this.state.match.url}/sparkline`} render={(props) => 
                 <Sparkline {...props}
                   base_url={this.state.base_url}
                   api_url={this.state.api_url}
-                />} 
+                  basename={this.state.basename}
+                />}
             />
             <Route path={`${this.state.match.url}/gauge`} render={(props) => 
                 <Gauge {...props}
                   base_url={this.state.base_url}
                   api_url={this.state.api_url}
-                />} 
+                  basename={this.state.basename}
+                />}
             />
             <Route render={(props) =>
               <NoMatch
-                base_url={this.state.base_url} 
-                api_url={this.state.api_url} 
-              />}
+                base_url={this.state.base_url}
+                  api_url={this.state.api_url}
+                  basename={this.state.basename}
+                />}
             />
         </Switch>
     );

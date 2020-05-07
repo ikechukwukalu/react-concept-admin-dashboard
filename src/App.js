@@ -10,7 +10,8 @@ class App extends Component {
       super();
       this.state = {
         base_url: 'http://localhost/concept/', // For production - Change to base directory folder name Eg. https://localhost/basename/ 
-        api_url: '' // Tha api url
+        api_url: '', // The api url
+        basename: 'concept'
       }
   }
 
@@ -18,7 +19,7 @@ class App extends Component {
     return (
         <Router basename={'/concept'}> {/* For production - Change to base directory folder name Eg. https://localhost/basename/  */}
           <ScrollToTop>
-            <Components base_url={this.state.base_url} api_url={this.state.api_url} />
+            <Components base_url={this.state.base_url} api_url={this.state.api_url} basename={this.state.basename.trim().replace("/", "")} />
           </ScrollToTop>
         </Router>
     );

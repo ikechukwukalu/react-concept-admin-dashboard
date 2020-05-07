@@ -15,7 +15,7 @@ class Ecommerce extends Component {
     this.state = {
       base_url: this.props.base_url,
       api_url: this.props.api_url,
-      path: window.location.pathname,
+      basename: this.props.basename,
       match: this.props.match
     }
   }
@@ -28,31 +28,36 @@ class Ecommerce extends Component {
                 <EcommerceDashboard {...props}
                   base_url={this.state.base_url}
                   api_url={this.state.api_url}
-                />} 
+                  basename={this.state.basename}
+                />}
             />
             <Route path={`${this.state.match.url}/product`} render={(props) => 
                 <EcommerceProduct {...props}
-                  base_url={this.state.base_url} 
+                  base_url={this.state.base_url}
                   api_url={this.state.api_url}
+                  basename={this.state.basename}
                 />} 
             />
             <Route path={`${this.state.match.url}/product-single`} render={(props) => 
                 <EcommerceProductSingle {...props}
-                  base_url={this.state.base_url} 
+                  base_url={this.state.base_url}
                   api_url={this.state.api_url}
-                />} 
+                  basename={this.state.basename}
+                />}
             />
             <Route path={`${this.state.match.url}/product-checkout`} render={(props) => 
                 <EcommerceProductCheckout {...props}
-                  base_url={this.state.base_url} 
+                  base_url={this.state.base_url}
                   api_url={this.state.api_url}
+                  basename={this.state.basename}
                 />} 
             />
             <Route render={(props) =>
               <NoMatch
-                base_url={this.state.base_url} 
-                api_url={this.state.api_url} 
-              />}
+                base_url={this.state.base_url}
+                  api_url={this.state.api_url}
+                  basename={this.state.basename}
+                />}
             />
         </Switch>
     );
