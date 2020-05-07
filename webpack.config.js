@@ -41,7 +41,7 @@ module.exports = {
             },
             { 
                 test: /\.(cur|jpg|jpeg|gif|png|woff|woff2|eot|ttf|svg)$/, 
-                loader: "url-loader?limit=50000&name=fonts/[name].[ext]" // For production change - url-loader?limit=50000&name=/fonts/[name].[ext] 
+                loader: "url-loader?limit=50000&name=/fonts/[name].[ext]"
             }
         ] 
     }, 

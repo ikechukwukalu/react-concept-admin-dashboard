@@ -6,7 +6,6 @@ import Scripts from '../../scripts/scripts-basic.js';
 
 import {ActiveLinkIds} from '../../helpers/active-links.js';
 
-import Map from '../../helpers/maps/map.js';
 import BasicMap from '../../helpers/maps/basicMap.js';
 import GeoFencesMap from '../../helpers/maps/GeoFencesMap.js';
 import PolygonMap from '../../helpers/maps/polygonMap.js';
