@@ -64,7 +64,7 @@ class CropperImage extends Component {
                                     <div className="col-md-9">
                                         {/* <h3>Demo:</h3> */}
                                         <div className="img-container">
-                                            <img id="image" src={this.state.base_url+"../assets/images/card-img-1.jpg"} alt="Picture" />
+                                            <img id="image" src={this.state.base_url+"assets/images/card-img-1.jpg"} alt="Picture" />
                                         </div>
                                     </div>
                                     <div className="col-md-3">
