@@ -22,6 +22,11 @@ class Header extends Component {
   
 toggle = () => this.setState({isOpen: !this.state.isOpen});
 toggleSideNav = () => this.setState({isOpenSideNav: !this.state.isOpenSideNav});
+setCaret = (e) => {
+    e.target.getAttribute('aria-expanded') == 'false' ? 
+    e.target.setAttribute('aria-expanded','true') : 
+    e.target.setAttribute('aria-expanded','false');
+}
   
   render() {
     return (
@@ -153,11 +158,11 @@ toggleSideNav = () => this.setState({isOpenSideNav: !this.state.isOpenSideNav});
                                     Menu
                                 </li>
                                 <li className="nav-item ">
-                                    <a className="nav-link" href="#" id="submenu-1"><i className="fa fa-fw fa-user-circle"></i>Dashboard <span className="badge badge-success">6</span></a>
+                                    <a className="nav-link" href="#" data-toggle="collapse" aria-expanded="false" onClick={this.setCaret} id="submenu-1"><i className="fa fa-fw fa-user-circle"></i>Dashboard <span className="badge badge-success">6</span></a>
                                     <UncontrolledCollapse toggler="#submenu-1" className="submenu">
                                         <ul className="nav flex-column">
                                             <li className="nav-item">
-                                                <a className="nav-link" href="#" id="submenu-1-1">E-Commerce</a>
+                                                <a className="nav-link" href="#" data-toggle="collapse" aria-expanded="false" onClick={this.setCaret} id="submenu-1-1">E-Commerce</a>
                                                 <UncontrolledCollapse toggler="#submenu-1-1" className="submenu">
                                                     <ul className="nav flex-column">
                                                         <li className="nav-item">
@@ -182,7 +187,7 @@ toggleSideNav = () => this.setState({isOpenSideNav: !this.state.isOpenSideNav});
                                                 <Link className="nav-link" id="dashboard-sales" to="/sales/dashboard">Sales</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <a className="nav-link" href="#" id="submenu-1-2">Influencer</a>
+                                                <a className="nav-link" href="#" data-toggle="collapse" aria-expanded="false" onClick={this.setCaret} id="submenu-1-2">Influencer</a>
                                                 <UncontrolledCollapse toggler="#submenu-1-2" className="submenu">
                                                     <ul className="nav flex-column">
                                                         <li className="nav-item">
@@ -201,7 +206,7 @@ toggleSideNav = () => this.setState({isOpenSideNav: !this.state.isOpenSideNav});
                                     </UncontrolledCollapse>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#" id="submenu-2" ><i className="fa fa-fw fa-rocket"></i>UI Elements</a>
+                                    <a className="nav-link" href="#" data-toggle="collapse" aria-expanded="false" onClick={this.setCaret} id="submenu-2" ><i className="fa fa-fw fa-rocket"></i>UI Elements</a>
                                     <UncontrolledCollapse toggler="#submenu-2" className="submenu">
                                         <ul className="nav flex-column">
                                             <li className="nav-item">
@@ -229,7 +234,7 @@ toggleSideNav = () => this.setState({isOpenSideNav: !this.state.isOpenSideNav});
                                     </UncontrolledCollapse>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#" id="submenu-3" ><i className="fas fa-fw fa-chart-pie"></i>Chart</a>
+                                    <a className="nav-link" href="#" data-toggle="collapse" aria-expanded="false" onClick={this.setCaret} id="submenu-3" ><i className="fas fa-fw fa-chart-pie"></i>Chart</a>
                                     <UncontrolledCollapse toggler="#submenu-3" className="submenu">
                                         <ul className="nav flex-column">
                                             <li className="nav-item">
@@ -254,7 +259,7 @@ toggleSideNav = () => this.setState({isOpenSideNav: !this.state.isOpenSideNav});
                                     </UncontrolledCollapse>
                                 </li>
                                 <li className="nav-item ">
-                                    <a className="nav-link" href="#" id="submenu-4" ><i className="fab fa-fw fa-wpforms"></i>Forms</a>
+                                    <a className="nav-link" href="#" data-toggle="collapse" aria-expanded="false" onClick={this.setCaret} id="submenu-4" ><i className="fab fa-fw fa-wpforms"></i>Forms</a>
                                     <UncontrolledCollapse toggler="#submenu-4" className="submenu">
                                         <ul className="nav flex-column">
                                             <li className="nav-item">
@@ -276,7 +281,7 @@ toggleSideNav = () => this.setState({isOpenSideNav: !this.state.isOpenSideNav});
                                     </UncontrolledCollapse>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#" id="submenu-5" ><i className="fas fa-fw fa-table"></i>Tables</a>
+                                    <a className="nav-link" href="#" data-toggle="collapse" aria-expanded="false" onClick={this.setCaret} id="submenu-5" ><i className="fas fa-fw fa-table"></i>Tables</a>
                                     <UncontrolledCollapse toggler="#submenu-5" className="submenu">
                                         <ul className="nav flex-column">
                                             <li className="nav-item">
@@ -292,7 +297,7 @@ toggleSideNav = () => this.setState({isOpenSideNav: !this.state.isOpenSideNav});
                                     Features
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#" id="submenu-6" ><i className="fas fa-fw fa-file"></i>Pages </a>
+                                    <a className="nav-link" href="#" data-toggle="collapse" aria-expanded="false" onClick={this.setCaret} id="submenu-6" ><i className="fas fa-fw fa-file"></i>Pages </a>
                                     <UncontrolledCollapse toggler="#submenu-6" className="submenu">
                                         <ul className="nav flex-column">
                                             <li className="nav-item">
@@ -344,7 +349,7 @@ toggleSideNav = () => this.setState({isOpenSideNav: !this.state.isOpenSideNav});
                                     </UncontrolledCollapse>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#" id="submenu-7" ><i className="fas fa-fw fa-inbox"></i>Apps <span className="badge badge-secondary">New</span></a>
+                                    <a className="nav-link" href="#" data-toggle="collapse" aria-expanded="false" onClick={this.setCaret} id="submenu-7" ><i className="fas fa-fw fa-inbox"></i>Apps <span className="badge badge-secondary">New</span></a>
                                     <UncontrolledCollapse toggler="#submenu-7" className="submenu">
                                         <ul className="nav flex-column">
                                             <li className="nav-item">
@@ -363,7 +368,7 @@ toggleSideNav = () => this.setState({isOpenSideNav: !this.state.isOpenSideNav});
                                     </UncontrolledCollapse>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#" id="submenu-8" ><i className="fas fa-fw fa-columns"></i>Icons</a>
+                                    <a className="nav-link" href="#" data-toggle="collapse" aria-expanded="false" onClick={this.setCaret} id="submenu-8" ><i className="fas fa-fw fa-columns"></i>Icons</a>
                                     <UncontrolledCollapse toggler="#submenu-8" className="submenu">
                                         <ul className="nav flex-column">
                                             <li className="nav-item">
@@ -388,7 +393,7 @@ toggleSideNav = () => this.setState({isOpenSideNav: !this.state.isOpenSideNav});
                                     </UncontrolledCollapse>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#" id="submenu-9" ><i className="fas fa-fw fa-map-marker-alt"></i>Maps</a>
+                                    <a className="nav-link" href="#" data-toggle="collapse" aria-expanded="false" onClick={this.setCaret} id="submenu-9" ><i className="fas fa-fw fa-map-marker-alt"></i>Maps</a>
                                     <UncontrolledCollapse toggler="#submenu-9" className="submenu">
                                         <ul className="nav flex-column">
                                             <li className="nav-item">
@@ -401,14 +406,14 @@ toggleSideNav = () => this.setState({isOpenSideNav: !this.state.isOpenSideNav});
                                     </UncontrolledCollapse>
                                 </li>
                                 <li className="nav-item">
-                                    <a className="nav-link" href="#" id="submenu-10" ><i className="fas fa-f fa-folder"></i>Menu Level</a>
+                                    <a className="nav-link" href="#" data-toggle="collapse" aria-expanded="false" onClick={this.setCaret} id="submenu-10" ><i className="fas fa-f fa-folder"></i>Menu Level</a>
                                     <UncontrolledCollapse toggler="#submenu-10" className="submenu">
                                         <ul className="nav flex-column">
                                             <li className="nav-item">
                                                 <a className="nav-link" href="#">Level 1</a>
                                             </li>
                                             <li className="nav-item">
-                                                <a className="nav-link" href="#" id="submenu-11" >Level 2</a>
+                                                <a className="nav-link" href="#" data-toggle="collapse" aria-expanded="false" onClick={this.setCaret} id="submenu-11" >Level 2</a>
                                                 <UncontrolledCollapse toggler="#submenu-11" className="submenu">
                                                     <ul className="nav flex-column">
                                                         <li className="nav-item">
