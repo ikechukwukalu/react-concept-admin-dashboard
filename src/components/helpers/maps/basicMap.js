@@ -1,31 +1,29 @@
-import React, {Component} from 'react';
-import {GoogleMap, withGoogleMap,} from 'react-google-maps';
+import React, { Fragment } from 'react';
+import { compose, withProps } from "recompose"
+import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
 
-
-const BasicMapGoogleMap = withGoogleMap(props => (
-    <GoogleMap
-        defaultZoom={15}
-        defaultCenter={{lat: 47.646935, lng: -122.303763}}
-    />
-));
-
-
-export default class BasicMap extends Component {
-
-    render() {
-        let styleName = this.props.styleName;
-        if (!styleName) {
-            styleName = 'embed-responsive-21by9'
-        }
-        return (
-            <div>
-                <BasicMapGoogleMap
-                    containerElement={
-                        <div className={`embed-responsive ${styleName}`}/>
-                    }
-                    mapElement={<div className="embed-responsive-item"/>}
-                />
-            </div>
-        );
+ const BasicMap = compose(
+  withProps({
+    googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyCRDCjoy1Xb4I0trWMUNiZXneCziSGoMl8&v=3.exp&libraries=geometry,drawing,places",
+    loadingElement: <div style={{ height: `100%` }} />,
+    containerElement: <div style={{ height: `100%` }} />,
+    mapElement: <div style={{ height: `100%` }} />,
+  }),
+  withScriptjs,
+  withGoogleMap
+)( (props) =>
+  <GoogleMap
+    defaultZoom={8}
+    defaultCenter={{ lat: -34.397, lng: 150.644 }}
+  >
+    {
+        props.isMarkerShown 
+            && 
+        <Fragment>
+            <Marker position={{ lat: -34.397, lng: 150.644 }} onClick={props.onMarkerClick} />
+            <Marker position={{ lat: -34.297, lng: 150.544 }} onClick={props.onMarkerClick} />
+        </Fragment>
     }
-}
+  </GoogleMap>
+);
+export default BasicMap;

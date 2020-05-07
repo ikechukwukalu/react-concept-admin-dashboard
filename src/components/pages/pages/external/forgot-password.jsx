@@ -26,23 +26,23 @@ class ForgotPassword extends Component {
   render() {
     return (
         <Fragment>
-        <div class="splash-container">
-            <div class="card external_pages">
-                <div class="card-header text-center"><img class="logo-img" src={this.state.base_url+"assets/images/logo.png"} alt="logo" /><span class="splash-description">Please enter your user information.</span></div>
-                <div class="card-body">
-                    <form>
-                        <p>Don't worry, we'll send you an email to reset your password.</p>
-                        <div class="form-group">
-                            <input class="form-control form-control-lg" type="email" name="email" required="" placeholder="Your Email" autoComplete="off" />
-                        </div>
-                        <div class="form-group pt-1"><Link class="btn btn-block btn-primary btn-xl" to="/">Reset Password</Link></div>
-                    </form>
-                </div>
-                <div class="card-footer text-center">
-                    <span>Don't have an account? <Link to="/external/sign-up">Sign Up</Link></span>
-                </div>
-            </div>
-        </div>
+          <div className="splash-container">
+              <div className="card external_pages">
+                  <div className="card-header text-center"><img className="logo-img" src={this.state.base_url+"assets/images/logo.png"} alt="logo" /><span className="splash-description">Please enter your user information.</span></div>
+                  <div className="card-body">
+                      <form>
+                          <p>Don't worry, we'll send you an email to reset your password.</p>
+                          <div className="form-group">
+                              <input className="form-control form-control-lg" type="email" name="email" required="" placeholder="Your Email" autoComplete="off" />
+                          </div>
+                          <div className="form-group pt-1"><Link className="btn btn-block btn-primary btn-xl" to="/">Reset Password</Link></div>
+                      </form>
+                  </div>
+                  <div className="card-footer text-center">
+                      <span>Don't have an account? <Link to="/external/sign-up">Sign Up</Link></span>
+                  </div>
+              </div>
+          </div>
             <Scripts base_url={this.state.base_url} />
         </Fragment>
     );

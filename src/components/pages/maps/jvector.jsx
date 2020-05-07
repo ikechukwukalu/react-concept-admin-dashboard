@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import $ from 'jquery';
 
 import Scripts from '../../scripts/scripts-map-jvector.js';
+
 import {ActiveLinkIds} from '../../helpers/active-links.js';
 
 class JvectorMap extends Component {

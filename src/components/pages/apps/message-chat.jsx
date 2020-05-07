@@ -192,7 +192,7 @@ class MessageChat extends Component {
                                     </button>
                                     <div className="custom-file custom-file-naked">
                                         <input type="file" className="custom-file-input" id="customFile" />
-                                        <label className="custom-file-label" for="customFile">
+                                        <label className="custom-file-label" htmlFor="customFile">
                                             <i className="fas fa-paperclip"></i>
                                         </label>
                                     </div>

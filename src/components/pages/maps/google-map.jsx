@@ -3,14 +3,19 @@ import $ from 'jquery';
 import { Link } from "react-router-dom";
 
 import Scripts from '../../scripts/scripts-basic.js';
+
 import {ActiveLinkIds} from '../../helpers/active-links.js';
+
 import Map from '../../helpers/maps/map.js';
 import BasicMap from '../../helpers/maps/basicMap.js';
-import GeoLocation from '../../helpers/maps/geoLocation.js';
-import KmlLayer from '../../helpers/maps/kmlLayer.js';
+import GeoFencesMap from '../../helpers/maps/GeoFencesMap.js';
+import PolygonMap from '../../helpers/maps/polygonMap.js';
+import PolylineMap from '../../helpers/maps/polylineMap.js';
+import KmlLayerMap from '../../helpers/maps/kmlLayerMap.js';
+import FusionTableLayerMap from '../../helpers/maps/FusionTableLayerMap.js';
 import MapEvent from '../../helpers/maps/mapEvent.js';
-import StreetView from '../../helpers/maps/streetViewPanoramas.js';
-import TrafficMap from '../../helpers/maps/trafficMap.js';
+import StreetViewPanormaMap from '../../helpers/maps/streetViewPanoramas.js';
+import TrafficLayerMap from '../../helpers/maps/TrafficLayerMap.js';
 
 class GoogleMap extends Component {
   constructor(props) {
@@ -41,6 +46,14 @@ class GoogleMap extends Component {
     }
   }
   
+  handleMarkerClick = () => {
+      alert('This marker was clicked');
+  }
+  
+  handleMarkerDrag = () => {
+      alert('Dragend');
+  }
+  
   render() {
     return (
         <Fragment>
@@ -69,7 +82,7 @@ class GoogleMap extends Component {
                         <h5 className="card-header">Basic Map</h5>
                         <div className="card-body">
                             <div id="map" className="gmaps">
-                                <Map />
+                                <BasicMap />
                             </div>
                         </div>
                     </div>
@@ -81,7 +94,7 @@ class GoogleMap extends Component {
                         <h5 className="card-header">Map Events</h5>
                         <div className="card-body">
                             <div id="map_1" className="gmaps">
-                                <Map />
+                                <MapEvent />
                             </div>
                         </div>
                     </div>
@@ -95,7 +108,7 @@ class GoogleMap extends Component {
                         <h5 className="card-header">Markers</h5>
                         <div className="card-body">
                             <div id="map_2" className="gmaps">
-                                <Map />
+                                <BasicMap isMarkerShown onMarkerClick={this.handleMarkerClick} />
                             </div>
                         </div>
                     </div>
@@ -107,7 +120,7 @@ class GoogleMap extends Component {
                         <h5 className="card-header">Polylines</h5>
                         <div className="card-body">
                             <div id="map_3" className="gmaps">
-                                <Map />
+                                <PolylineMap />
                             </div>
                         </div>
                     </div>
@@ -121,7 +134,7 @@ class GoogleMap extends Component {
                         <h5 className="card-header">Polygons</h5>
                         <div className="card-body">
                             <div id="map_4" className="gmaps">
-                                <Map />
+                                <PolygonMap />
                             </div>
                         </div>
                     </div>
@@ -132,7 +145,7 @@ class GoogleMap extends Component {
                         <h5 className="card-header">Routes</h5>
                         <div className="card-body">
                             <div id="map_5" className="gmaps">
-                                <Map />
+                                <BasicMap />
                             </div>
                         </div>
                     </div>
@@ -146,7 +159,7 @@ class GoogleMap extends Component {
                         <h5 className="card-header">Routes Advance</h5>
                         <div className="card-body">
                             <div id="map_6" className="gmaps">
-                                <Map />
+                                <BasicMap />
                             </div>
                             <a href="#" id="start_travel" className="btn btn-primary m-t-20">start</a>
                             <ul id="instructions">
@@ -160,7 +173,7 @@ class GoogleMap extends Component {
                         <h5 className="card-header">Street View Panoramas</h5>
                         <div className="card-body">
                             <div id="panorama" className="gmaps">
-                                <Map />
+                                <StreetViewPanormaMap />
                             </div>
                         </div>
                     </div>
@@ -171,10 +184,10 @@ class GoogleMap extends Component {
                 
                 <div className="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12">
                     <div className="card">
-                        <h5 className="card-header">Map Types</h5>
+                        <h5 className="card-header">Traffic Layer Map</h5>
                         <div className="card-body">
                             <div id="map_7" className="gmaps">
-                                <Map />
+                                <TrafficLayerMap />
                             </div>
                         </div>
                     </div>
@@ -185,7 +198,7 @@ class GoogleMap extends Component {
                         <h5 className="card-header">Fusion Tables layers</h5>
                         <div className="card-body">
                             <div id="map_8" className="gmaps">
-                                <Map />
+                                <FusionTableLayerMap />
                             </div>
                         </div>
                     </div>
@@ -199,7 +212,7 @@ class GoogleMap extends Component {
                         <h5 className="card-header">KML layers</h5>
                         <div className="card-body">
                             <div id="map_9" className="gmaps">
-                                <Map />
+                                <KmlLayerMap />
                             </div>
                         </div>
                     </div>
@@ -210,7 +223,7 @@ class GoogleMap extends Component {
                         <h5 className="card-header">Geofences</h5>
                         <div className="card-body">
                             <div id="map_10" className="gmaps">
-                                <Map />
+                                <GeoFencesMap isMarkerShown />
                             </div>
                         </div>
                     </div>

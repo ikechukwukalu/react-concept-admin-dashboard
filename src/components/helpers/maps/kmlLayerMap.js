@@ -1,8 +1,8 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { compose, withProps } from "recompose"
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps"
+import { withScriptjs, withGoogleMap, GoogleMap, KmlLayer } from "react-google-maps"
 
- const EventMap = compose(
+const KmlLayerMap = compose(
   withProps({
     googleMapURL: "https://maps.googleapis.com/maps/api/js?key=AIzaSyCRDCjoy1Xb4I0trWMUNiZXneCziSGoMl8&v=3.exp&libraries=geometry,drawing,places",
     loadingElement: <div style={{ height: `100%` }} />,
@@ -11,11 +11,17 @@ import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-map
   }),
   withScriptjs,
   withGoogleMap
-)( (props) =>
+)(props =>
   <GoogleMap
-    defaultZoom={8}
-    defaultCenter={{ lat: -34.397, lng: 150.644 }}
-    onDragEnd={() => alert('Dragend')}
-  />
+    defaultZoom={9}
+    defaultCenter={{ lat: 41.9, lng: -87.624 }}
+  >
+    <KmlLayer
+      url="http://googlemaps.github.io/js-v2-samples/ggeoxml/cta.kml"
+      options={{ preserveViewport: true }}
+    />
+  </GoogleMap>
 );
-export default EventMap;
+
+
+  export default KmlLayerMap;

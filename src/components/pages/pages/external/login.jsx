@@ -26,30 +26,30 @@ class Login extends Component {
   render() {
     return (
         <Fragment>
-            <div class="splash-container">
-                <div class="card external_card">
-                    <div class="card-header text-center"><Link to="/"><img class="logo-img" src={this.state.base_url+"assets/images/logo.png"} alt="logo" /></Link><span class="splash-description">Please enter your user information.</span></div>
-                    <div class="card-body">
+            <div className="splash-container">
+                <div className="card external_card">
+                    <div className="card-header text-center"><Link to="/"><img className="logo-img" src={this.state.base_url+"assets/images/logo.png"} alt="logo" /></Link><span className="splash-description">Please enter your user information.</span></div>
+                    <div className="card-body">
                         <form>
-                            <div class="form-group">
-                                <input class="form-control form-control-lg" id="username" type="text" placeholder="Username" autoComplete="off" />
+                            <div className="form-group">
+                                <input className="form-control form-control-lg" id="username" type="text" placeholder="Username" autoComplete="off" />
                             </div>
-                            <div class="form-group">
-                                <input class="form-control form-control-lg" id="password" type="password" placeholder="Password" />
+                            <div className="form-group">
+                                <input className="form-control form-control-lg" id="password" type="password" placeholder="Password" />
                             </div>
-                            <div class="form-group">
-                                <label class="custom-control custom-checkbox">
-                                    <input class="custom-control-input" type="checkbox"c/><span class="custom-control-label">Remember Me</span>
+                            <div className="form-group">
+                                <label className="custom-control custom-checkbox">
+                                    <input className="custom-control-input" type="checkbox" /><span className="custom-control-label">Remember Me</span>
                                 </label>
                             </div>
-                            <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+                            <button type="submit" className="btn btn-primary btn-lg btn-block">Sign in</button>
                         </form>
                     </div>
-                    <div class="card-footer bg-white p-0  ">
-                        <div class="card-footer-item card-footer-item-bordered">
-                            <Link to="/external/sign-up" class="footer-link">Create An Account</Link></div>
-                        <div class="card-footer-item card-footer-item-bordered">
-                            <Link to="/external/forgot-password" class="footer-link">Forgot Password</Link>
+                    <div className="card-footer bg-white p-0  ">
+                        <div className="card-footer-item card-footer-item-bordered">
+                            <Link to="/external/sign-up" className="footer-link">Create An Account</Link></div>
+                        <div className="card-footer-item card-footer-item-bordered">
+                            <Link to="/external/forgot-password" className="footer-link">Forgot Password</Link>
                         </div>
                     </div>
                 </div>
