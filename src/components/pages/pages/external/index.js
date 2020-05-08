@@ -12,7 +12,6 @@ class Pages extends Component {
     super(props);
     this.state = {
       base_url: this.props.base_url,
-      api_url: this.props.api_url,
       basename: this.props.basename,
       match: this.props.match
     }
@@ -26,35 +25,35 @@ class Pages extends Component {
                 <Login {...props}
                   base_url={this.state.base_url}
                   api_url={this.state.api_url}
-                  basename={this.state.basename}
+                  
                 />}
             />
             <Route path={`${this.state.match.url}/sign-up`} render={(props) => 
                 <SignUp {...props}
                   base_url={this.state.base_url}
                   api_url={this.state.api_url}
-                  basename={this.state.basename}
+                  
                 />} 
             />
             <Route path={`${this.state.match.url}/404`} render={(props) => 
                 <NotFound {...props}
                   base_url={this.state.base_url}
                   api_url={this.state.api_url}
-                  basename={this.state.basename}
+                  
                 />} 
             />
             <Route path={`${this.state.match.url}/forgot-password`} render={(props) => 
                 <ForgotPassword {...props}
                   base_url={this.state.base_url}
                   api_url={this.state.api_url}
-                  basename={this.state.basename}
+                  
                 />} 
             />
             <Route render={(props) =>
                 <NotFound {...props}
                   base_url={this.state.base_url}
                   api_url={this.state.api_url}
-                  basename={this.state.basename}
+                  
                 />}
             />
         </Switch>

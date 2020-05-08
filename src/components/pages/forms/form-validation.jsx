@@ -11,8 +11,7 @@ class FormValidation extends Component {
     this.state = {
       base_url: this.props.base_url,
       api_url: this.props.api_url,
-      basename: this.props.basename,
-      path: this.props.basename.length > 0 ? window.location.pathname.trim().replace('/'+this.props.basename, '') : window.location.pathname.trim(),
+      path: this.props.location.pathname,
       active_links: ActiveLinkIds
     }
   }
