@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import $ from 'jquery';
 import { Link } from "react-router-dom";
+import { UncontrolledDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 
 import Scripts from '../../scripts/scripts-form-elements.js';
 import {ActiveLinkIds} from '../../helpers/active-links.js';
@@ -352,19 +353,37 @@ class FormElements extends Component {
                                             <div className="input-group mb-3">
                                                 <input type="text" className="form-control" />
                                                 <div className="input-group-append be-addon">
-                                                    <button type="button" data-toggle="dropdown" className="btn btn-secondary dropdown-toggle">Dropdown</button>
-                                                    <div className="dropdown-menu"><a href="#" className="dropdown-item">Action</a><a href="#" className="dropdown-item">Another action</a><a href="#" className="dropdown-item">Something else here</a>
-                                                        <div className="dropdown-divider"></div><a href="#" className="dropdown-item">Separated link</a>
-                                                    </div>
+                                                    <UncontrolledDropdown>
+                                                        <DropdownToggle caret tag="button" className="btn btn-secondary">
+                                                            Dropdown
+                                                        </DropdownToggle>
+                                                        <DropdownMenu>
+                                                            <DropdownItem header>Header</DropdownItem>
+                                                            <DropdownItem tag="a">Action</DropdownItem>
+                                                            <DropdownItem tag="a">Another Action</DropdownItem>
+                                                            <DropdownItem tag="a">Something else here</DropdownItem>
+                                                            <DropdownItem divider />
+                                                            <DropdownItem tag="a">Separated link</DropdownItem>
+                                                        </DropdownMenu>
+                                                    </UncontrolledDropdown>
                                                 </div>
                                             </div>
                                             <div className="input-group mb-3">
                                                 <div className="input-group-prepend be-addon">
                                                     <button tabIndex="-1" type="button" className="btn btn-secondary">Dropdown</button>
-                                                    <button tabIndex="-1" data-toggle="dropdown" type="button" className="btn btn-secondary dropdown-toggle dropdown-toggle-split"><span className="sr-only">Toggle Dropdown</span></button>
-                                                    <div className="dropdown-menu"><a href="#" className="dropdown-item">Action</a><a href="#" className="dropdown-item">Another action</a><a href="#" className="dropdown-item">Something else here</a>
-                                                        <div className="dropdown-divider"></div><a href="#" className="dropdown-item">Separated link</a>
-                                                    </div>
+                                                    <UncontrolledDropdown>
+                                                        <DropdownToggle caret tag="button" className="btn btn-secondary dropdown-toggle-split" tabIndex="-1">
+                                                            <span className="sr-only">Toggle Dropdown</span>
+                                                        </DropdownToggle>
+                                                        <DropdownMenu>
+                                                            <DropdownItem header>Header</DropdownItem>
+                                                            <DropdownItem tag="a">Action</DropdownItem>
+                                                            <DropdownItem tag="a">Another Action</DropdownItem>
+                                                            <DropdownItem tag="a">Something else here</DropdownItem>
+                                                            <DropdownItem divider />
+                                                            <DropdownItem tag="a">Separated link</DropdownItem>
+                                                        </DropdownMenu>
+                                                    </UncontrolledDropdown>
                                                 </div>
                                                 <input type="text" className="form-control" />
                                             </div>
@@ -507,19 +526,37 @@ class FormElements extends Component {
                                             <div className="input-group mb-3">
                                                 <input type="text" className="form-control" />
                                                 <div className="input-group-append be-addon">
-                                                    <button type="button" data-toggle="dropdown" className="btn btn-secondary dropdown-toggle">Dropdown</button>
-                                                    <div className="dropdown-menu"><a href="#" className="dropdown-item">Action</a><a href="#" className="dropdown-item">Another action</a><a href="#" className="dropdown-item">Something else here</a>
-                                                        <div className="dropdown-divider"></div><a href="#" className="dropdown-item">Separated link</a>
-                                                    </div>
+                                                    <UncontrolledDropdown>
+                                                        <DropdownToggle caret tag="button" className="btn btn-secondary">
+                                                            Dropdown
+                                                        </DropdownToggle>
+                                                        <DropdownMenu>
+                                                            <DropdownItem header>Header</DropdownItem>
+                                                            <DropdownItem tag="a">Action</DropdownItem>
+                                                            <DropdownItem tag="a">Another Action</DropdownItem>
+                                                            <DropdownItem tag="a">Something else here</DropdownItem>
+                                                            <DropdownItem divider />
+                                                            <DropdownItem tag="a">Separated link</DropdownItem>
+                                                        </DropdownMenu>
+                                                    </UncontrolledDropdown>
                                                 </div>
                                             </div>
                                             <div className="input-group mb-3">
                                                 <div className="input-group-prepend be-addon">
                                                     <button tabIndex="-1" type="button" className="btn btn-secondary">Dropdown</button>
-                                                    <button tabIndex="-1" data-toggle="dropdown" type="button" className="btn btn-secondary dropdown-toggle dropdown-toggle-split"><span className="sr-only">Toggle Dropdown</span></button>
-                                                    <div className="dropdown-menu"><a href="#" className="dropdown-item">Action</a><a href="#" className="dropdown-item">Another action</a><a href="#" className="dropdown-item">Something else here</a>
-                                                        <div className="dropdown-divider"></div><a href="#" className="dropdown-item">Separated link</a>
-                                                    </div>
+                                                    <UncontrolledDropdown>
+                                                        <DropdownToggle caret tag="button" className="btn btn-secondary dropdown-toggle-split" tabIndex="-1">
+                                                            <span className="sr-only">Toggle Dropdown</span>
+                                                        </DropdownToggle>
+                                                        <DropdownMenu>
+                                                            <DropdownItem header>Header</DropdownItem>
+                                                            <DropdownItem tag="a">Action</DropdownItem>
+                                                            <DropdownItem tag="a">Another Action</DropdownItem>
+                                                            <DropdownItem tag="a">Something else here</DropdownItem>
+                                                            <DropdownItem divider />
+                                                            <DropdownItem tag="a">Separated link</DropdownItem>
+                                                        </DropdownMenu>
+                                                    </UncontrolledDropdown>
                                                 </div>
                                                 <input type="text" className="form-control" />
                                             </div>

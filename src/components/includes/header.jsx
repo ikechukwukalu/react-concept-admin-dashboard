@@ -33,7 +33,7 @@ setCaret = (e) => {
         <div className="dashboard-header">
             <nav className="navbar navbar-expand-lg bg-white fixed-top">
                 <Link className="navbar-brand" to="/ecommerce/dashboard">Concept</Link>
-                <NavbarToggler onClick={this.toggle} />
+                <NavbarToggler onClick={this.toggle} className="mobileNav" />
                 <Collapse isOpen={this.state.isOpen} navbar>
                     <ul className="navbar-nav ml-auto navbar-right-top">
                         <li className="nav-item">
