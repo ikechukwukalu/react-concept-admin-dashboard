@@ -8,7 +8,7 @@ module.exports = {
     output: { 
         path: path.resolve(__dirname, 'dist'), 
         filename: 'main.js', 
-        publicPath: '/' // For production - Change to base directory folder name Eg. https://localhost/basename/
+        publicPath: '/concept' // For production - Change to base directory folder name Eg. https://localhost/basename/
     }, 
     devServer: { 
         historyApiFallback: true,

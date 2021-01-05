@@ -4,12 +4,11 @@ import './App.css';
 import Components from './components/index.jsx';
 import ScrollToTop from './scroll.js';
 
-
 class App extends Component {
   constructor() {
       super();
       this.state = {
-        base_url: 'http://localhost:8080/', // For production - Change to base directory folder name Eg. https://localhost/basename/ 
+        base_url: 'https://templates.provirtcomm.com/concept/', // For production - Change to base directory folder name Eg. https://localhost/basename/ 
         api_url: '', // The api url
       }
   }
