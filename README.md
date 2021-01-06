@@ -1,5 +1,5 @@
 <p align="center">
-    Original Authors - [Colorlib](https://colorlib.com)
+    Original Authors - <a href="https://colorlib.com" target="_blank">Colorlib</a>
 </p>
 
 <p align="center">
