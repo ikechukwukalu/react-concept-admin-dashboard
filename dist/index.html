@@ -1,1 +1,58 @@
-<!doctype html> <html lang=en> <head> <meta charset=utf-8> <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"> <link rel=icon href=/favicon.ico /> <link rel=stylesheet href=/concept/assets/vendor/bootstrap/css/bootstrap.min.css> <link rel=stylesheet href=/concept/assets/vendor/fonts/circular-std/style.css> <link rel=stylesheet href=/concept/assets/libs/css/style.css> <link rel=stylesheet href=/concept/assets/vendor/charts/chartist-bundle/chartist.css> <link rel=stylesheet href=/concept/assets/vendor/charts/morris-bundle/morris.css> <link rel=stylesheet href=/concept/assets/vendor/charts/c3charts/c3.css> <link rel=stylesheet href=/concept/assets/vendor/fonts/fontawesome/css/fontawesome-all.css> <link rel=stylesheet href=/concept/assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css> <link rel=stylesheet href=/concept/assets/vendor/fonts/flag-icon-css/flag-icon.min.css> <link rel=stylesheet href=/concept/assets/vendor/vector-map/jqvmap.css> <link rel=stylesheet href=/concept/assets/vendor/jvectormap/jquery-jvectormap-2.0.2.css> <link rel=stylesheet href=/concept/assets/vendor/daterangepicker/daterangepicker.css /> <link rel=stylesheet href=/concept/assets/vendor/inputmask/css/inputmask.css /> <link rel=stylesheet href=/concept/assets/vendor/multi-select/css/multi-select.css /> <link rel=stylesheet href=/concept/assets/vendor/datepicker/tempusdominus-bootstrap-4.css /> <link rel=stylesheet href=/concept/assets/vendor/bootstrap-select/css/bootstrap-select.css /> <link rel=stylesheet href=/concept/assets/vendor/datatables/css/dataTables.bootstrap4.css /> <link rel=stylesheet href=/concept/assets/vendor/datatables/css/buttons.bootstrap4.css /> <link rel=stylesheet href=/concept/assets/vendor/datatables/css/select.bootstrap4.css /> <link rel=stylesheet href=/concept/assets/vendor/datatables/css/fixedHeader.bootstrap4.css /> <link rel=stylesheet href=/concept/assets/vendor/full-calendar/css/fullcalendar.css /> <link rel=stylesheet href=/concept/assets/vendor/cropper/dist/cropper.min.css> <link rel=stylesheet href=/concept/assets/vendor/bootstrap-colorpicker/%40claviska/jquery-minicolors/jquery.minicolors.css /> <link rel=stylesheet href=/concept/assets/vendor/select2/css/select2.css> <link rel=stylesheet href=/concept/assets/vendor/summernote/css/summernote-bs4.css> <link rel=stylesheet href=/concept/assets/vendor/fonts/simple-line-icons/css/simple-line-icons.css> <link rel=stylesheet href=/concept/assets/vendor/fonts/themify-icons/themify-icons.css> <link rel=stylesheet href=/concept/assets/vendor/fonts/flag-icon-css/flag-icon.min.css> <link rel=stylesheet href=/concept/assets/vendor/fonts/weather-icons/css/weather-icons.min.css> <link rel=stylesheet href=/concept/assets/vendor/jvectormap/jquery-jvectormap-2.0.2.css> <title>Concept - Bootstrap 4 Admin Dashboard Template</title> <link href="/concept/main.css" rel="stylesheet"></head> <body> <noscript>You need to enable JavaScript to run this app.</noscript> <div id=root></div> <script type="text/javascript" src="/concept/main.js"></script></body> </html> 
+<!doctype html>
+<html lang=en>
+
+<head>
+    <meta charset=utf-8>
+    <meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no">
+    <link rel=icon href=/favicon.ico />
+    <link rel=stylesheet href=/concept/assets/vendor/bootstrap/css/bootstrap.min.css>
+    <link rel=stylesheet href=/concept/assets/vendor/fonts/circular-std/style.css>
+    <link rel=stylesheet href=/concept/assets/libs/css/style.css>
+    <link rel=stylesheet href=/concept/assets/vendor/charts/chartist-bundle/chartist.css>
+    <link rel=stylesheet href=/concept/assets/vendor/charts/morris-bundle/morris.css>
+    <link rel=stylesheet href=/concept/assets/vendor/charts/c3charts/c3.css>
+    <link rel=stylesheet href=/concept/assets/vendor/fonts/fontawesome/css/fontawesome-all.css>
+    <link rel=stylesheet href=/concept/assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css>
+    <link rel=stylesheet href=/concept/assets/vendor/fonts/flag-icon-css/flag-icon.min.css>
+    <link rel=stylesheet href=/concept/assets/vendor/vector-map/jqvmap.css>
+    <link rel=stylesheet href=/concept/assets/vendor/jvectormap/jquery-jvectormap-2.0.2.css>
+    <link rel=stylesheet href=/concept/assets/vendor/daterangepicker/daterangepicker.css />
+    <link rel=stylesheet href=/concept/assets/vendor/inputmask/css/inputmask.css />
+    <link rel=stylesheet href=/concept/assets/vendor/multi-select/css/multi-select.css />
+    <link rel=stylesheet href=/concept/assets/vendor/datepicker/tempusdominus-bootstrap-4.css />
+    <link rel=stylesheet href=/concept/assets/vendor/bootstrap-select/css/bootstrap-select.css />
+    <link rel=stylesheet href=/concept/assets/vendor/datatables/css/dataTables.bootstrap4.css />
+    <link rel=stylesheet href=/concept/assets/vendor/datatables/css/buttons.bootstrap4.css />
+    <link rel=stylesheet href=/concept/assets/vendor/datatables/css/select.bootstrap4.css />
+    <link rel=stylesheet href=/concept/assets/vendor/datatables/css/fixedHeader.bootstrap4.css />
+    <link rel=stylesheet href=/concept/assets/vendor/full-calendar/css/fullcalendar.css />
+    <link rel=stylesheet href=/concept/assets/vendor/cropper/dist/cropper.min.css>
+    <link rel=stylesheet
+        href=/concept/assets/vendor/bootstrap-colorpicker/%40claviska/jquery-minicolors/jquery.minicolors.css />
+    <link rel=stylesheet href=/concept/assets/vendor/select2/css/select2.css>
+    <link rel=stylesheet href=/concept/assets/vendor/summernote/css/summernote-bs4.css>
+    <link rel=stylesheet href=/concept/assets/vendor/fonts/simple-line-icons/css/simple-line-icons.css>
+    <link rel=stylesheet href=/concept/assets/vendor/fonts/themify-icons/themify-icons.css>
+    <link rel=stylesheet href=/concept/assets/vendor/fonts/flag-icon-css/flag-icon.min.css>
+    <link rel=stylesheet href=/concept/assets/vendor/fonts/weather-icons/css/weather-icons.min.css>
+    <link rel=stylesheet href=/concept/assets/vendor/jvectormap/jquery-jvectormap-2.0.2.css>
+    <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
+    <link href="/concept/main.css" rel="stylesheet">
+
+    <style>
+      .dashboard-content {
+        min-height: calc(100vh - 110px) !important;
+      }
+  
+      .dashboard-wrapper {
+        min-height: 100% !important;
+      }
+    </style>
+</head>
+
+<body> <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id=root></div>
+    <script type="text/javascript" src="/concept/main.js"></script>
+</body>
+
+</html>
